@@ -1,0 +1,298 @@
+style.css
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0b1020;
+    color: #f5f7ff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background-color: #10172d;
+    border-bottom: 1px solid #273353;
+}
+
+.logo {
+    color: #62f5d5;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #f5f7ff;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #62f5d5;
+}
+
+.principal {
+    min-height: 520px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.conteudo-principal {
+    flex: 1;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #62f5d5;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4.3rem);
+    line-height: 1.1;
+    margin-bottom: 22px;
+}
+
+h1 span {
+    color: #62f5d5;
+}
+
+.conteudo-principal p {
+    color: #c1c9df;
+    max-width: 520px;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 8px;
+    background-color: #62f5d5;
+    color: #0b1020;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #a0ffe9;
+    transform: translateY(-3px);
+}
+
+.imagem-principal {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-principal img {
+    display: block;
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Apresentação */
+.apresentacao {
+    text-align: center;
+    padding: 75px 8%;
+    background-color: #111a32;
+}
+
+h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-bottom: 20px;
+}
+
+.apresentacao p {
+    max-width: 750px;
+    margin: auto;
+    color: #c1c9df;
+}
+
+/* Benefícios */
+.beneficios {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.subtitulo {
+    color: #c1c9df;
+    margin-bottom: 40px;
+}
+
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.cartao {
+    background-color: #151f3a;
+    border: 1px solid #293758;
+    padding: 30px 22px;
+    border-radius: 14px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.cartao:hover {
+    transform: translateY(-7px);
+    border-color: #62f5d5;
+}
+
+.icone {
+    font-size: 2.5rem;
+}
+
+.cartao h3 {
+    color: #62f5d5;
+    margin: 15px 0 10px;
+}
+
+.cartao p {
+    color: #c1c9df;
+}
+
+/* Seção de destaque */
+.destaque {
+    margin: 20px 8% 75px;
+    padding: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(135deg, #17294a, #22204c);
+    border: 1px solid #344568;
+    border-radius: 18px;
+}
+
+.destaque div:first-child {
+    max-width: 650px;
+}
+
+.destaque p {
+    color: #c1c9df;
+}
+
+.destaque-icone {
+    font-size: 5rem;
+}
+
+/* Chamada para ação */
+.contato {
+    padding: 75px 8%;
+    text-align: center;
+    background: linear-gradient(135deg, #124c54, #22204c);
+}
+
+.contato p {
+    margin-bottom: 25px;
+    color: #e0e7f5;
+}
+
+.botao-claro {
+    background-color: #ffffff;
+    margin-bottom: 22px;
+}
+
+.botao-claro:hover {
+    background-color: #dffcf5;
+}
+
+.contato small {
+    display: block;
+    margin-top: 20px;
+    color: #d2d9eb;
+}
+
+/* Rodapé */
+footer {
+    padding: 25px 8%;
+    text-align: center;
+    background-color: #080c18;
+    color: #aab5cf;
+    font-size: 0.9rem;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .principal {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .conteudo-principal p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .imagem-principal img {
+        max-width: 380px;
+    }
+
+    .cartoes {
+        grid-template-columns: 1fr;
+    }
+
+    .destaque {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 22px;
+    }
+
+    .destaque-icone {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        gap: 10px;
+        font-size: 0.9rem;
+    }
+
+    .principal {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
